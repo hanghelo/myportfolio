@@ -1,0 +1,1094 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9FAFF;
+}
+
+
+
+/* **********   ------------- UNIVERSAL SELECTION -------------   ********** */
+/* Header 1 */
+h1 {
+    font-size: 80px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Header 2 */
+h2 {
+    font-size: 40px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Header 3 */
+h3 {
+    font-size: 20px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    margin-bottom: 15px;
+}
+
+/* Header 4 */
+h4 {
+    font-size: 20px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Paragraph */
+p {
+    text-align: justify;
+    font-size: 18px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Buttons and input */
+button, input{
+    font-size: 16px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+}
+
+/* Button Grow Effect */
+button:hover, .formbutton input:hover  {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Button 1 - Yellow */
+.yellow, .projectdescbox > button {
+    background-color: #FDC435;
+    color: white;
+    border: none;
+}
+
+/* Button 2 - White */
+.white {
+    background-color: #F9FAFF;
+    color: black;
+    border: none;
+    box-shadow: inset 0 0 0 1px black;
+}
+
+
+/* **********   ------------- HEADER BOX -------------   ********** */
+/* FORMATTING THE HEADER BOX */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 50px 50px 50px;
+    flex-wrap: wrap;
+    margin: 0px 100px 30px 100px;
+    /* border: 2px solid green; */
+    text-align: justify;
+    font-size: 20px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+}
+/* **********   ------------- NAVBAR -------------   ********** */
+/* FORMATTING THE HEADER'S NAVIGATION LIST */
+.nav_buttons {
+    display: flex;
+}
+
+/* putting list spaces */
+.nav_buttons > li:not(:last-child) {
+    margin-right: 120px;
+}
+
+/* removing list bullets */
+li {
+    list-style-type: none;
+    z-index: 10;
+}
+
+/* removing list hyperlink */
+a {
+    text-decoration: none;
+    color: black
+}
+
+/* navigation bar menu : grow effect */
+.nav_buttons > li:hover  {
+    transform: scale(1.5);
+}
+
+/* navigation bar menu : color effect */
+.nav_buttons > li:hover  > a {
+    color: #023BCF;
+    text-decoration: underline;
+    text-decoration-color: #023BCF;
+}
+
+
+/* **********   ------------- COPYPOINTS -------------   ********** */
+/* FORMATTING THE INTRODUCTION COPYPOINT */
+.intro_copyandbutton_box {
+    position: relative;
+    /* border: 2px solid red; */
+    width: 886px;
+    height: 508px;
+    padding: 10px 50px 30px 50px;
+    top: 0px;
+    left: 100px;
+    word-wrap: break-word;
+    white-space: normal;
+    line-height: 1.5;
+    z-index: 100;
+}
+
+/* FORMATTING ALL H1-H3 and all P */
+h1, h2, h3, h4, p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* FORMATTING INTRO BUTTONS CONTAINER*/
+.intro_buttons {
+    padding: 10px 0 10px 0;
+    margin: 20px 0 20px 0;
+}
+
+/* FORMATTING INTRO BUTTONS */
+a > button {
+    padding: 10px 15px 10px 15px;
+    border-radius: 15px;
+}
+
+/* FORMATTING INTRO FIRST BUTTON */
+.intro_buttons > a:first-child {
+    margin-right: 15px;
+}
+
+
+/* **********   ------------- H2 expertise class -------------   ********** */
+
+/* FORMATTING THE H2 */
+.expertise::after {
+    content: '';
+    color: black;
+    animation:
+    title-rotation 4s steps(5, start) infinite;
+    z-index: 101;
+}
+
+/* inserting content to H2 */
+@keyframes title-rotation {
+    0% { content: "Web Developer"; }
+    25% { content: "Business Analyst"; }
+    50% { content: "Solutions Specialist"; }
+    75% { content: "Project Mgt Specialist"; }
+    100% { content: "Data Analyst"; }
+}
+
+/* **********   ------------- MAIN IMAGE -------------   ********** */
+
+/* .intro_imagecontainer {
+    border: 2px solid pink;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* FORMATTING THE YELLOW VECTOR BACKGROUND */
+.intro_imagecontainer > img:first-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* border: 2px solid violet; */
+    height: 100vh;
+    width: auto;
+    z-index: -1;
+    /* overflow: hidden; */
+}
+
+/* FORMATTING THE MAIN IMAGE */
+/* .intro_imagecontainer > img:last-child {
+    position: absolute;
+    top: 145px;
+    right: 170px;
+    border: 2px solid black;
+    height: 88vh;
+    width: auto;
+    object-fit: contain;
+} */
+
+
+/* **********   ------------- CORE TOOL BOX -------------   ********** */
+/* FORMATTING THE CORE TOOL BIG BOX */
+.coretool_bigbox {
+    width: 886px;
+    height: auto;
+    padding: 50px 50px 50px 50px;
+    flex-wrap: wrap;
+    margin: 45px 100px 90px 100px;
+    /* border: 2px solid green; */
+}
+
+/* CONVERTING THE LIST FROM COLUMN TO ROWS */
+.coretools_ul {
+    display: flex;
+}
+
+/* FORMATTING THE TOOL LIST */
+.coretools_ul > li > img {
+    width: 35px;
+    height: auto;
+    margin-right: 12px;
+}
+
+/* GROUPING THE TOOL LIST */
+.coretools_ul > li:nth-child(3), .coretools_ul > li:nth-child(4), .coretools_ul > li:nth-child(8), .coretools_ul > li:nth-child(10){
+    margin-right: 30px;
+}
+
+/* core tools logo : grow effect */
+.coretools_ul > li:hover  {
+    transform: scale(1.5);
+}
+
+
+/* **********   ------------- PROJECT SECTION -------------   ********** */
+/* CENTERING THE PROJECT SECTION and FORM SECTION*/
+.projectsection, .formsection {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* FORMATTING THE HORIZONTAL LINE*/
+hr {
+    margin: 10px;
+    border: 2px solid #FDC435;
+    border-radius: 10px;
+}
+
+/* SHAPING THE PROJECT BOX */
+.projectdescbox, .projectimage, .projectimage > img {
+    width: 496px;
+    height: 526px;
+}
+
+/* FORMATTING THE PROJECT CONTAINER (COPY POINT + IMAGE BOX)  */
+.projectcontainer {
+    display: flex;
+    width: 992px;
+    height: 526px;
+    border: 1px solid lightgrey;
+    border-radius: 24px;
+    box-shadow: 0px 6px 64px 0px #7090B01A;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* FORMATTING THE PROJECT COPY POINT BOX */
+.projectdescbox {
+    padding: 90.5px 50.44px 10px 50.44px;
+}
+
+.projectdescbox h3 {
+    margin-bottom: 10px;
+}
+
+.projectdescbox > button {
+    width: auto;
+    height: 43px;
+    padding: 8px 24px 8px 24px;
+    border-radius: 24px;
+    border: none;
+    margin-top: 35px;
+}
+
+/* REVERSING PROJECT 2 */
+.proj2 {
+    order: 2;
+}
+
+/* **********   ------------- FORM SECTION -------------   ********** */
+
+/* FORMATTING THE FORM */
+form {
+    text-align: justify;
+    font-size: 18px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+
+/* FORMATTING THE FORM FIELDS OF NAME AND EMAIL*/
+form > input:not(:last-child) {
+    width: 450px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid #E7ECF4;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+/* FORMATTING THE PLACEHOLDER TEXT OF THE FIELD */
+::placeholder {
+    text-align: justify;
+    font-size: 10px;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    padding: 5px;
+    font-style: italic;
+}
+
+/* FORMATTING THE FORM FIELD OF MESSAGE*/
+form > textarea {
+    width: 450px;
+    height: 150px;
+    border-radius: 12px;
+    border: 1px solid #E7ECF4;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+/* moving the form's buttons from left to right */
+.formbutton {
+    float: right;
+}
+
+/* form reset button */
+.reset {
+    background-color: #F9FAFF;
+    color: black;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 1px black;
+    margin-right: 5px;
+}
+
+/* form submit button */
+.submit {
+    background-color: #FDC435;
+    color: white;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    border-radius: 15px;
+}
+
+
+/* **********   -------------  FOOTER -------------   ********** */
+
+/* FORMATTING THE FOOTER */
+footer {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* FORMATTING THE HEADER 4 */
+footer > h4 {
+    margin-bottom: 10px;
+}
+
+/* FORMATTING THE SOCMED ICONS FROM ROWS TO COLUMN */
+.socmedul {
+    display: flex;
+    margin: 5px 0 0 0;
+}
+
+/* FORMATTING THE SOCMED SIZE */
+.socmedcontainer img {
+    width: 38px;
+    height: auto;
+}
+
+/* SOCMED SPACES */
+.socmedcontainer li:not(:last-child) {
+    margin-right: 18px;
+}
+
+/* core tools logo : grow effect */
+.socmedul > li:hover  {
+    transform: scale(1.5);
+}
+
+/* Footer image */
+.footerimage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Para mag-cover yung buong area ng container */
+    display: block; /* Para alisin yung default na 4px na space sa ilalim ng inline images */
+}
+
+
+
+
+/* **********   -------------  ABOUT PAGE -------------   ********** */
+
+/* FORMATTING THE ABOUT HERO SECTION FROM COLUMN TO ROW */
+.aboutbox {
+    display: flex;
+    margin: 0 100px 0 100px;
+    padding: 0 50px 0 50px;
+    gap: 200px;
+    justify-content: center;
+    /* border: 2px solid green; */
+}
+
+/* FORMATTING THE ABOUT-COPYPOINT CONTAINER */
+.about_copyandbutton_box {
+    display: grid;
+    width: 524px;
+    height: 524px;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+
+/* FORMATTING THE ABOUT-IMAGE CONTAINER */
+.about_imagecontainer {
+    width: 524px;
+    height: 524px;
+    gap: 0px;
+    border-radius: 600px;
+    opacity: 0px;
+    background-color: #FDC435;
+    padding: 10px;
+    overflow: hidden;
+    /* border: 2px solid green; */
+}
+
+/* FORMATTING THE ABOUT-MY PIC */
+.about_imagecontainer img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* **********   -------------  CONTACT PAGE -------------   ********** */
+
+/* FORMATTING THE CONTACT BOX */
+.contactbox {
+    background-color: #FDC435;
+    padding: 80px 150px 100px 150px;
+    display:grid;
+    justify-content: center;
+}
+
+/* FORMATTING THE CONTACT BOX COPY POINT */
+.contact_copyandbutton_box {
+    display: flex;
+    gap: 150px;
+}
+
+.contact_copy {
+    width: 700px;
+    height: auto;
+}
+
+
+.abtfooter {
+    position: absolute;
+    left: 310px;
+    top: 500px;
+}
+
+#submit {
+    box-shadow: inset 0 0 0 1px white;
+}
+
+
+
+
+
+/* **********   -------------  RESPONSIVE DESIGN FOR MOBILE -------------   ********** */
+
+/* LAPTOP LARGE 1440 x 857 */
+@media (min-width:1025px) and (max-width: 1440px) {
+
+/* HOME */
+    .intro_copyandbutton_box {
+        width: 686px;
+        height: auto;
+    }
+
+    .intro_buttons {
+        padding: 10px 0 10px 0;
+        margin: 10px 0 25px 0;
+    }
+
+    .coretool_bigbox {
+        position: absolute;
+        top: 650px;
+        left: 0;
+    }
+
+    .projectsection {
+        margin-top: 120px;
+    }
+
+    .header_nav input[type="checkbox"] {
+        display: none;
+    }
+}   
+
+/* LAPTOP REGULAR 1024 x 769 */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 50px 0px 20px 0px;
+        font-size: 16px;
+    }
+
+    .nav_buttons > li:not(:last-child) {
+        margin-right: 50px;
+    }
+
+    .intro_copyandbutton_box {
+        padding-left: 0;
+    }
+
+    h1 {
+        font-size: 60px;
+        font-family: "Comfortaa", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+    
+    h2 {
+        font-size: 30px;
+        font-family: "Comfortaa", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-family: "Comfortaa", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .projectcontainer br {
+        display: none;
+    }
+    
+    .coretool_bigbox {
+        position: absolute;
+        top: 450px;
+        left: -50px;
+    }
+
+    .coretools_ul > li > img {
+        width: 25px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .coretools_ul > li:nth-child(3), .coretools_ul > li:nth-child(4), .coretools_ul > li:nth-child(8), .coretools_ul > li:nth-child(10){
+        margin-right: 12px;
+    }
+
+    p {
+        text-align: justify;
+        font-size: 15px;
+        font-family: "Comfortaa", sans-serif;
+        font-optical-sizing: auto;
+    }
+
+    .intro_copyandbutton_box {
+        position: relative;
+        /* border: 2px solid red; */
+        width: 586px;
+        height: 508px;
+    }
+
+    .intro_buttons {
+        margin: 5px 0 20px 0;
+    }
+
+    a > button {
+        padding: 8px 10px 8px 10px;
+    }
+
+    .intro_buttons > a:first-child {
+        margin-right: 10px;
+    }
+
+    .projectcontainer {
+        display: flex;
+        width: 600px; /* Adjust according to your design */
+        height: auto; /* Allow the height to adjust based on content */
+        flex-direction: column; /* Stack elements vertically for smaller screens */
+    }
+    
+    .projectdescbox, .projectimage, .projectimage > img {
+        width: 100%; /* Allow the elements to fill the container width */
+        height: auto; /* Adjust height automatically */
+    }
+    
+    .projectdescbox {
+        padding: 20px;
+    }
+
+    .projectdescbox > button {
+        margin-top: 10px;
+    }
+}
+
+
+/* TABLET 768 x 426 */
+
+/* HOME */
+@media (max-width: 768px) and (min-width: 426px) {
+    /* Hamburger icon styles */
+    .header_nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        cursor: pointer;
+        z-index: 10;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburger div {
+        width: 30px;
+        height: 4px;
+        background: #333;
+        border-radius: 2px;
+    }
+
+    .nav_buttons {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 0px; /* Adjust to fit below the hamburger */
+        right: 100px;
+        width: 50px; /* Adjust as needed */
+        background: black;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 500;
+    }
+
+    .nav_buttons.show {
+        display: flex; /* Show when active */
+    }
+
+    .nav_buttons > li {
+        margin-bottom: 10px;
+    }
+
+    .nav_buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav_buttons a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+    }
+
+    /* Hamburger menu open state */
+    .menu-toggle:checked + .hamburger + .header_nav .nav_buttons {
+        display: flex; /* Show when checkbox is checked */
+    }
+
+    /* ************************************* */
+    .intro_copyandbutton_box {
+        margin-top: 230px;
+    }
+    h1 {
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 25px;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .intro_copy p {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .intro_copy p:first-child {
+        margin-bottom: 100px;
+    }
+
+    .intro_copy {
+        /* background-color: gray; */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #DCDCDC80;
+    }
+
+    .intro_buttons {
+        margin-top: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 50px;
+        padding: 50px 20px;
+    }
+
+    .header_logo {
+        font-size: 24px;
+    }
+
+    .nav_buttons {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .nav_buttons > li:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .intro_copyandbutton_box {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        left: 0;
+    }
+
+    .intro_buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro_buttons > a:first-child {
+        margin-right: 10px;
+    }
+
+    .coretool_bigbox {
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        padding: 0 20px 20px 20px;
+    }
+
+    .coretools_ul > li > img {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    .coretools_ul > li:nth-child(3), .coretools_ul > li:nth-child(4), .coretools_ul > li:nth-child(8), .coretools_ul > li:nth-child(10){
+        margin-right: 0px;
+    }
+
+    .projectcontainer {
+        /* flex-direction: column; */
+        width: 60%;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .projectdescbox, .projectimage {
+        width: 250px; /* Smaller width */
+        height: 300px; /* Smaller height */
+    }
+
+    .projectdescbox {
+        padding: 30px 20px; /* Adjusted padding */
+        text-align: center;
+        text-wrap: wrap;
+    }
+
+    .projectimage > img {
+        width: 60%;
+        height: auto;
+    }
+
+    .formsection {
+        padding: 0 20px;
+    }
+
+    .formbutton input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .socmedul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .socmedul li {
+        margin: 10px;
+    }
+
+    footer h4 {
+        text-align: center;
+    }
+
+    .footerimage img {
+        width: 100%;
+    }
+}
+
+
+/* MOBILE 425px and below */
+
+@media (max-width: 425px) {
+    /* Hamburger icon styles */
+    .header_nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 10;
+        width: 25px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        border-radius: 2px;
+    }
+
+    .nav_buttons {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 50px; /* Adjust to fit below the hamburger */
+        right: 10px;
+        width: 100px; /* Adjust as needed */
+        background: black;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 500;
+    }
+
+    .nav_buttons.show {
+        display: flex; /* Show when active */
+    }
+
+    .nav_buttons > li {
+        margin-bottom: 5px;
+    }
+
+    .nav_buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav_buttons a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+    /* Hamburger menu open state */
+    .menu-toggle:checked + .hamburger + .header_nav .nav_buttons {
+        display: flex; /* Show when checkbox is checked */
+    }
+
+    .intro_copyandbutton_box {
+        margin-top: 150px;
+    }
+
+    h1 {
+        font-size: 40px;
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .intro_copy p {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .intro_copy p:first-child {
+        margin-bottom: 80px;
+    }
+
+    .intro_copy {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #DCDCDC80;
+    }
+
+    .intro_buttons {
+        margin-top: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 20px;
+        padding: 20px 10px;
+    }
+
+    .header_logo {
+        font-size: 20px;
+    }
+
+    .nav_buttons {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav_buttons > li:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .intro_copyandbutton_box {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+        left: 0;
+    }
+
+    .intro_buttons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro_buttons > a:first-child {
+        margin-right: 5px;
+    }
+
+    .coretool_bigbox {
+        display: grid;
+        justify-content: center;
+        width: 100%;
+        padding: 0 10px 10px 10px;
+    }
+
+    .coretools_ul > li > img {
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+
+    .projectcontainer {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .projectdescbox, .projectimage {
+        width: 200px; /* Smaller width */
+        height: 250px; /* Smaller height */
+    }
+
+    .projectdescbox {
+        padding: 20px 10px; /* Adjusted padding */
+        text-align: center;
+        text-wrap: wrap;
+    }
+
+    .projectimage > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .formsection {
+        padding: 0 10px;
+    }
+
+    .formbutton input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .socmedul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .socmedul li {
+        margin: 5px;
+    }
+
+    footer h4 {
+        text-align: center;
+    }
+
+    .footerimage img {
+        width: 100%;
+    }
+}

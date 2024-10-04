@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trial</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header_logo">Gelo Reyes</div>
+        <nav class="header_nav">
+            <ul class="nav_buttons">
+                <li><a href="01_webdevportfolio_v2.html" target="_blank">Home</a></li>
+                <li><a href="02_About.html" target="_blank">About</a></li>
+                <!-- <li><a href="#projectlabel">Projects</a></li> -->
+                <li><a href="03_Contacts.html" target="_self">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- MAIN SECTION -->
+        <section class="contactbox">
+            <!-- CONTACT COPY POINT and FORM BOX -->
+            <div class="contact_copyandbutton_box">
+                <div class="contact_copy">
+                    <h1>I can help you.</h1>
+                    <br>
+                    <p>Request a personalized IT service using up-to-date technologies and see our solutions in action.</p>
+                    <p>Fill out the form beside with some inf about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.</p>
+                </div>
+
+                <div class="contact_form">
+                    <form action="https://www.google.com/" method="GET">
+        
+                        <!-- Name Input Field -->
+                        <label for="name">Name</label>
+                        <br>
+                        <input type="text"
+                               id="name"
+                               name="name"
+                               pattern="[A-Za-z\s]{3,100}"
+                               placeholder="Enter First Name"
+                               title="First Name Middle Name Last Name"
+                               minlength="3"
+                               maxlength="100">
+                        <br>
+        
+                        <!-- Email Address Field -->    
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Enter your Email"
+                               title="Please enter a valid email address">
+                        <br>
+        
+                        <!-- Your Message Text Area -->
+                        <label for="Your Message">Message</label>
+                        <br>
+                        <textarea type="text"
+                               id="Message"
+                               name="name"
+                               pattern="[A-Za-z\s]{3,100}"
+                               placeholder="Your Message"
+                               title="Your Message"
+                               minlength="10"
+                               maxlength="100"
+                               required
+                               rows ="4"
+                               cols = "50"></textarea>
+                        <br>
+                        <br>
+        
+                        <div class="formbutton">
+                            <input type="reset" value="Reset" class="reset">
+                            <input type="submit" value="Submit" class="submit" id="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="abtfooter">
+        <h4>Reach out through our socials!</h4>
+        <div class="socmedcontainer">
+            <ul class="socmedul">
+                <li><a href="https://discord.com/channels/@me" target="_blank"><img src="resources/socmed_discord.png" alt="socmed_discord_logo"></a></li>
+                <li><a href="https://www.facebook.com/hanghelo/" target="_blank"><img src="resources/socmed_facebook.png" alt="socmed_facebook_logo"></a></li>
+                <li><a href="https://gitlab.com/hanghelo" target="_blank"><img src="resources/socmed_gitlab.png" alt="socmed_gitlab_logo"></a></li>
+                <li><a href="mailto:reyesgelo00@gmail.com" target="_blank"><img src="resources/socmed_gmail.png" alt="socmed_gmail_logo"></a></li>
+                <li><a href="https://www.linkedin.com/in/chrisjohn-paul-angelo-reyes-a733a222a/" target="_blank"><img src="resources/socmed_linkedin.png" alt="socmed_linkedin_logo"></a></li>
+                <!-- <li><a href="mailto:reyesgelo00@outlook.com" target="_blank"><img src="resources/socmed_outlook.png" alt="socmed_outlook_logo"></a></li> -->
+                <li><a href="https://join.skype.com/invite/wsBsnhI0rIdf" target="_blank"><img src="resources/socmed_skype.png" alt="socmed_skype_logo"></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
