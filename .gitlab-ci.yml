@@ -1,11 +1,22 @@
+image: node:lts
+
+# Cache dependencies (if any)
+cache:
+  paths:
+    - node_modules/
+
+# Define stages
+stages:
+  - deploy
+
+# Job to deploy the static website to GitLab Pages
 pages:
   stage: deploy
   script:
     - mkdir public
-    - cp -r * public
-    - mv public public
+    - cp -r * public  # Copy all files into the 'public' directory
   artifacts:
     paths:
-      - public
+      - public  # Specify the folder containing your website files
   only:
-    - main
+    - main  # Run this job only when changes are pushed to the 'main' branch
