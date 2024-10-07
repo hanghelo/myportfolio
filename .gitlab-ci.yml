@@ -6,6 +6,7 @@ stages:
 pages:
   stage: deploy
   script:
+    - apt-get update -y && apt-get install -y rsync  # Install rsync
     - mkdir public
     - rsync -av --exclude='public' ./ public/
   artifacts:
