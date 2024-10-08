@@ -6,10 +6,10 @@ stages:
 pages:
   stage: deploy
   script:
-    - mkdir public
-    - find . -maxdepth 1 -not -name public -exec cp -r {} public/ \;
+    - mkdir -p public  # Create the 'public' directory if it doesn't exist
+    - cp -r 01_My_Portfolio/* public/  # Copy all contents from '01_MyPortfolio' to 'public'
   artifacts:
     paths:
-      - public
+      - public  # Specify that the 'public' folder is the artifact for GitLab Pages
   only:
-    - main
+    - main  # Run this job only on changes pushed to the 'main' branch
