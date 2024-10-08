@@ -1,15 +1,30 @@
-image: node:lts
+name: Deploy to GitHub Pages
 
-stages:
-  - deploy
+on:
+  push:
+    branches:
+      - main  # This will run on pushes to the 'main' branch
 
-pages:
-  stage: deploy
-  script:
-    - mkdir -p public  # Create the 'public' directory if it doesn't exist
-    - cp -r 01_My_Portfolio/* public/  # Copy all contents from '01_MyPortfolio' to 'public'
-  artifacts:
-    paths:
-      - public  # Specify that the 'public' folder is the artifact for GitLab Pages
-  only:
-    - main  # Run this job only on changes pushed to the 'main' branch
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+
+      - name: Create 'public' directory and copy files
+        run: |
+          mkdir -p public
+          cp -r 01_My_Portfolio/* public/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public
